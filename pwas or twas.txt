@@ -1,0 +1,9 @@
+for i in {1..22};do
+Rscript FUSION.assoc_test.R \
+--sumstats stroke.sumstats \
+--weights ./WEIGHTS/protein.pos \
+--weights_dir ./WEIGHTS/ \
+--ref_ld_chr ./LDREF/1000G.EUR. \
+--chr ${i} \
+--out ./result/stroke.chr${i}.dat
+done
